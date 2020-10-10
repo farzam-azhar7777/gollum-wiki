@@ -1,0 +1,74 @@
+{
+  "name": "Gollum on Heroku",
+  "description": "auto generate git powered wiki Gollum to Heroku.",
+  "repository": "https://github.com/farzam-azhar7777/gollum-wiki",
+  "env": {
+    "GITHUB_TOKEN": {
+      "description": "d3de7678db785c3b85deda22db239c6403b14e1e",
+      "required": false
+    },
+    "GIT_REPO_URL_1": {
+      "description": "https://github.com/farzam-azhar7777/gollum-wiki",
+      "required": true
+    },
+    "GIT_REPO_URL_2": {
+      "description": "Git repository URL.",
+      "required": false
+    },
+    "AUTHOR_NAME": {
+      "required": false
+    },
+    "AUTHOR_EMAIL": {
+      "required": false
+    },
+    "BASIC_AUTH_USERNAME": {
+      "description": "User name for Basic authentication",
+      "required": false
+    },
+    "BASIC_AUTH_PASSWORD": {
+      "description": "Password for Basic authentication",
+      "required": false
+    },
+    "BASIC_AUTH_MANAGE_ONLY": {
+      "description": "Only manage action such as edit/create. (default :false)",
+      "required": false
+    },
+    "GOLLUM_H1_TITLE": {
+      "description": "Option for Gollum (default: true)",
+      "required": false
+    },
+    "GOLLUM_UNIVERSAL_TOC": {
+      "description": "Option for Gollum (default: false)",
+      "required": false
+    },
+    "GOLLUM_ALLOW_EDITING": {
+      "description": "Option for Gollum (default: true)",
+      "required": false
+    },
+    "GOLLUM_LIVE_PREVIEW": {
+      "description": "Option for Gollum (default: false)",
+      "required": false
+    },
+    "GOLLUM_ALLOW_UPLOADS": {
+      "description": "Option for Gollum (default: true)",
+      "required": false
+    },
+    "GOLLUM_SHOW_ALL": {
+      "description": "Option for Gollum (default: true)",
+      "required": false
+    },
+    "GOLLUM_COLLAPSE_TREE": {
+      "description": "Option for Gollum (default: false)",
+      "required": false
+    },
+    "GOLLUM_IS_BARE": {
+      "description": "git repository URL must include .git (default: false)",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-multi.git"
+    }
+  ]
+}
